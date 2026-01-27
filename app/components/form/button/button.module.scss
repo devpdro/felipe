@@ -1,0 +1,186 @@
+.icon {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: var(--btn-width, auto);
+    white-space: nowrap;
+    font-family: 'Trajan Pro', serif;
+}
+
+.btn--sm {
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.btn--md {
+    padding: 14px 28px;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.btn--lg {
+    padding: 16px 32px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.btn1 {
+    /* Gradiente terra/fogo com toques místicos */
+    background: linear-gradient(135deg, 
+        #8B4513 0%,    /* marrom terra */
+        #A0522D 25%,   /* sienna */
+        #CD853F 50%,   /* peru dourado */
+        #D2691E 75%,   /* chocolate */
+        #8B4513 100%
+    );
+    
+    color: #FFF8DC; /* cornsilk - tom quente de texto */
+    border-radius: 9999px;
+    font-weight: 700;
+
+    /* Glow místico com tons de fogo e terra */
+    box-shadow:
+        0 0 25px rgba(205, 133, 63, 0.6),      /* glow dourado */
+        0 0 45px rgba(139, 69, 19, 0.4),       /* glow terra */
+        0 0 65px rgba(255, 140, 0, 0.3),       /* glow laranja */
+        0 4px 15px rgba(0, 0, 0, 0.4),         /* sombra profunda */
+        inset 0 0 25px rgba(255, 215, 0, 0.15), /* brilho interno dourado */
+        inset 0 -2px 10px rgba(0, 0, 0, 0.3);  /* profundidade interna */
+
+    /* Gradiente radial para efeito tribal místico */
+    background-image:
+        radial-gradient(ellipse at top left, rgba(255, 215, 0, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at top, rgba(255, 140, 0, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at left, rgba(205, 133, 63, 0.2) 0%, transparent 50%),
+        linear-gradient(135deg, 
+            #8B4513 0%, 
+            #A0522D 25%, 
+            #CD853F 50%, 
+            #D2691E 75%, 
+            #8B4513 100%
+        );
+
+    /* Borda com efeito tribal */
+    border: 1px solid rgba(255, 215, 0, 0.4);
+
+    position: relative;
+    overflow: visible;
+
+    /* Pseudo-elemento: aura externa mística */
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -3px;
+        border-radius: 9999px;
+        background: radial-gradient(ellipse 200% 100% at top left,
+                rgba(255, 140, 0, 0.5) 0%,      /* laranja fogo */
+                rgba(205, 133, 63, 0.35) 30%,   /* dourado */
+                rgba(139, 69, 19, 0.2) 60%,     /* terra */
+                transparent 80%);
+        opacity: 0.9;
+        z-index: -1;
+        transition: opacity 0.4s ease;
+        filter: blur(12px);
+    }
+
+    /* Pseudo-elemento: brilho superior tribal */
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 9999px;
+        background: radial-gradient(ellipse 150% 80% at top,
+                rgba(255, 215, 0, 0.4) 0%,      /* ouro */
+                rgba(255, 140, 0, 0.25) 40%,    /* laranja */
+                transparent 70%);
+        opacity: 0.7;
+        z-index: -1;
+        transition: opacity 0.4s ease;
+        filter: blur(6px);
+    }
+
+    &:hover {
+        /* Intensifica o gradiente no hover */
+        background: linear-gradient(135deg, 
+            #A0522D 0%, 
+            #CD853F 25%, 
+            #DAA520 50%,    /* goldenrod - mais brilho */
+            #CD853F 75%, 
+            #A0522D 100%
+        );
+        
+        transform: translateY(-2px);
+        color: #FFFACD; /* lemon chiffon - texto ainda mais claro */
+
+        /* Glow místico intensificado */
+        box-shadow:
+            0 0 35px rgba(255, 215, 0, 0.7),       /* glow ouro forte */
+            0 0 55px rgba(205, 133, 63, 0.5),      /* glow dourado */
+            0 0 80px rgba(255, 140, 0, 0.4),       /* glow laranja amplo */
+            0 6px 20px rgba(0, 0, 0, 0.5),         /* sombra mais profunda */
+            inset 0 0 30px rgba(255, 215, 0, 0.2), /* brilho interno */
+            inset 0 -3px 15px rgba(0, 0, 0, 0.4);  /* profundidade */
+
+        &::before {
+            opacity: 1;
+            filter: blur(15px);
+        }
+
+        &::after {
+            opacity: 0.9;
+            filter: blur(8px);
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow:
+            0 0 25px rgba(205, 133, 63, 0.6),
+            0 0 45px rgba(139, 69, 19, 0.4),
+            0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+        width: var(--btn-width-xs, 100%) !important;
+        font-size: 13px;
+        padding: 14px 24px;
+        min-width: unset;
+        max-width: 100vw;
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        width: var(--btn-width-sm, var(--btn-width, auto));
+        font-size: 13px;
+        padding: 14px 28px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        width: var(--btn-width-md, var(--btn-width, auto));
+        font-size: 14px;
+        padding: 15px 30px;
+    }
+
+    @media (min-width: 1025px) {
+        width: var(--btn-width-lg, var(--btn-width, auto));
+    }
+}

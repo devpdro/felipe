@@ -1,0 +1,298 @@
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.075rem;
+  text-align: center;
+  color: #fff;
+
+  .content {
+    position: relative;
+  }
+
+  .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 20px;
+    margin: 0 auto 0.875rem;
+    border-radius: 12px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: max-content;
+    text-align: center;
+    position: relative;
+    font-family: 'Trajan Pro', serif;
+    background: rgba(139, 69, 19, 0.15);
+    border: 1px solid rgba(218, 165, 32, 0.3);
+
+    // Gradiente dourado/terroso no texto
+    color: #DAA520;
+    text-shadow: 0 0 10px rgba(218, 165, 32, 0.4);
+
+    // Borda com gradiente dourado e glow
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      padding: 1px;
+      background: linear-gradient(90deg,
+          rgba(218, 165, 32, 0.5) 0%,
+          rgba(205, 133, 63, 0.4) 50%,
+          rgba(218, 165, 32, 0.5) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      filter: blur(0.5px);
+    }
+
+    // Efeito glow dourado
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.3),
+    0 0 20px rgba(205, 133, 63, 0.2),
+    0 0 30px rgba(139, 69, 19, 0.15);
+
+    .badgeIcon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      vertical-align: middle;
+      transform: translateY(-1px);
+      color: #DAA520;
+      text-shadow: 0 0 8px rgba(218, 165, 32, 0.5);
+    }
+  }
+
+  .title {
+    font-family: 'Trajan Pro', serif;
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 1.075rem;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  .subtitle {
+    font-family: 'Trajan Pro', serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  .grid {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(218, 165, 32, 0.15);
+    box-shadow: 
+      0 0 0 1px rgba(218, 165, 32, 0.08),
+      0 4px 24px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 34px 32px;
+    transform-style: preserve-3d;
+    width: 100%;
+    max-width: 380px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: rgba(218, 165, 32, 0.25);
+      box-shadow: 
+        0 0 0 1px rgba(218, 165, 32, 0.15),
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(218, 165, 32, 0.3) 20%,
+        rgba(218, 165, 32, 0.5) 50%,
+        rgba(218, 165, 32, 0.3) 80%,
+        transparent 100%
+      );
+      opacity: 0.6;
+    }
+
+    .topIcon {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      min-width: 120px;
+      font-family: 'Trajan Pro', serif;
+      height: 28px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(218, 165, 32, 0.2);
+      border-radius: 14px;
+      box-shadow:
+        0 0 0 1px rgba(218, 165, 32, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      z-index: 3;
+      white-space: nowrap;
+
+      .iconSymbol {
+        font-family: 'Trajan Pro', serif;
+        font-size: 11px;
+        font-weight: 600;
+        color: #DAA520;
+        text-shadow: 0 0 8px rgba(218, 165, 32, 0.4);
+        line-height: 1;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        letter-spacing: 0.05em;
+
+        >span:first-child {
+          flex-shrink: 0;
+          color: #DAA520;
+          text-shadow: 0 0 6px rgba(218, 165, 32, 0.5);
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      top: 50%;
+      left: 0;
+      width: 2px;
+      height: 30%;
+      background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(218, 165, 32, 0.4) 50%,
+        transparent 100%
+      );
+      opacity: 0.5;
+    }
+
+    .cardInner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .heading {
+      font-family: 'Trajan Pro', serif;
+      color: rgba(220, 225, 255, 0.9);
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      margin: 0;
+      text-align: left;
+    }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .priceValue {
+      color: #fff;
+      font-family: 'Trajan Pro', serif;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 1;
+    }
+
+    .suffix {
+      color: rgba(200, 200, 220, 0.8);
+      font-size: 16px;
+      font-family: 'Trajan Pro', serif;
+
+    }
+
+
+    .list {
+      text-align: left;
+      color: rgba(230, 230, 245, 0.92);
+      margin: 4px 0 0;
+      padding: 0;
+      list-style: none;
+      font-family: 'Trajan Pro', serif;
+
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      padding: 6px 0;
+    }
+
+    .check {
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .logoInline {
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
+      height: 20px;
+      object-fit: contain;
+      margin-left: 4px;
+      opacity: 0.9;
+    }
+  }
+
+  @media (max-width: 820px) {
+    margin: 5rem auto 0rem;
+
+    .card {
+      max-width: 92%;
+      padding: 24px 20px 26px;
+    }
+
+    .card .priceValue {
+      font-size: clamp(32px, 9vw, 40px);
+    }
+  }
+}

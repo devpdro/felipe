@@ -1,0 +1,48 @@
+import { Vitruvian, Atlas, Price, FAQ, Footer, Lumen, Proof, Comparison, Exclusive } from "@/app/components";
+
+
+export default function Home() {
+  return (
+    <div className="flex flex-col w-full relative bg-[#0a0a0a]" style={{
+      backgroundColor: '#0a0a0a',
+      backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.2) 1px, transparent 0)',
+      backgroundSize: '16px 16px',
+      backgroundPosition: '0 0'
+    }}>
+      <div className="fixed inset-0 z-0 bg-[#0a0a0a]" style={{
+        backgroundColor: '#0a0a0a',
+        backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.2) 1px, transparent 0)',
+        backgroundSize: '16px 16px',
+        backgroundPosition: '0 0'
+      }}>
+      </div>
+      <div className="relative w-full min-h-screen z-10">
+        <Vitruvian /> 
+      </div>
+      <div className="relative w-full min-h-screen z-10">
+        <Atlas /> 
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "0", marginBottom: "0" }}>
+        <Lumen />
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <Exclusive />
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <Comparison />
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <Price />
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <FAQ />
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <Proof />
+      </div>
+      <div className="relative w-full z-10">
+        <Footer />
+      </div>
+    </div>
+  );
+}
