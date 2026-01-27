@@ -1,82 +1,105 @@
 .section {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 4rem 1.075rem;
-  text-align: center;
-  color: #fff;
-  position: relative;
-
-  @media (max-width: 768px) {
-    padding: 3rem 1rem;
-  }
-}
-
-.iconWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.5rem;
-
-  .spiralIcon {
-    width: 32px;
-    height: 32px;
-    color: #3b82f6;
-    filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.6));
-  }
-}
-
-.title {
-  font-family: 'Trajan Pro', serif;
-  font-size: 48px;
-  line-height: 56px;
-  font-weight: 600;
-  color: #fff;
-  margin: 0 0 3rem;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 36px;
-    line-height: 44px;
-    margin-bottom: 2rem;
-  }
-}
-
-.imageContainer {
-  position: relative;
-  width: 100%;
   max-width: 900px;
-  margin: 0 auto;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 
-    0 0 0 1px rgba(218, 165, 32, 0.15),
-    0 8px 32px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  margin: 6rem auto;
+  padding: 0 1.075rem;
 
   @media (max-width: 768px) {
-    border-radius: 16px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(218, 165, 32, 0.15);
+  box-shadow: 
+    0 0 0 1px rgba(218, 165, 32, 0.08),
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(218, 165, 32, 0.25);
+    box-shadow: 
+      0 0 0 1px rgba(218, 165, 32, 0.15),
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(218, 165, 32, 0.3) 20%,
+      rgba(218, 165, 32, 0.5) 50%,
+      rgba(218, 165, 32, 0.3) 80%,
+      transparent 100%
+    );
+    opacity: 0.6;
+    z-index: 2;
   }
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 66.67%; // Aspect ratio 3:2
+  height: 400px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    padding-bottom: 80%;
+    height: 300px;
   }
 }
 
 .image {
   object-fit: cover;
   object-position: center;
-  border-radius: 20px;
+}
+
+.content {
+  position: relative;
+  padding: 2.5rem;
+  padding-bottom: 4rem;
 
   @media (max-width: 768px) {
-    border-radius: 16px;
+    padding: 2rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+.textContent {
+  position: relative;
+  z-index: 1;
+}
+
+.paragraph {
+  font-family: 'Trajan Pro', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -85,46 +108,16 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 70%;
+  height: 120px;
   background: linear-gradient(
-    to top,
-    rgba(10, 10, 10, 0.98) 0%,
-    rgba(10, 10, 10, 0.92) 20%,
-    rgba(10, 10, 10, 0.75) 40%,
-    rgba(10, 10, 10, 0.5) 60%,
-    rgba(10, 10, 10, 0.2) 80%,
-    transparent 100%
+    to bottom,
+    transparent 0%,
+    rgba(10, 10, 10, 0.3) 20%,
+    rgba(10, 10, 10, 0.6) 50%,
+    rgba(10, 10, 10, 0.85) 80%,
+    rgba(10, 10, 10, 0.95) 95%,
+    #0a0a0a 100%
   );
   pointer-events: none;
-  z-index: 1;
-}
-
-.textOverlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2rem 2.5rem;
   z-index: 2;
-  text-align: left;
-
-  @media (max-width: 768px) {
-    padding: 1.5rem 1.25rem;
-  }
 }
-
-.overlayText {
-  font-family: 'Trajan Pro', serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-

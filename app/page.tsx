@@ -1,4 +1,4 @@
-import { Banner, Price, FAQ, Footer, Lumen, Proof, Comparison, Exclusive } from "@/app/components";
+import { Banner, Price, FAQ, Footer, Lumen, Proof, Comparison, Exclusive, Manifesto } from "@/app/components";
 
 
 export default function Home() {
@@ -18,6 +18,9 @@ export default function Home() {
       </div>
       <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
         <Banner />
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <Manifesto />
       </div>
       <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
         <Exclusive />
