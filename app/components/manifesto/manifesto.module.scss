@@ -1,0 +1,130 @@
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1.075rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  .spiralIcon {
+    width: 32px;
+    height: 32px;
+    color: #3b82f6;
+    filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.6));
+  }
+}
+
+.title {
+  font-family: 'Trajan Pro', serif;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 3rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 2rem;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 1px rgba(218, 165, 32, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  @media (max-width: 768px) {
+    border-radius: 16px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66.67%; // Aspect ratio 3:2
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    padding-bottom: 80%;
+  }
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+
+  @media (max-width: 768px) {
+    border-radius: 16px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.98) 0%,
+    rgba(10, 10, 10, 0.92) 20%,
+    rgba(10, 10, 10, 0.75) 40%,
+    rgba(10, 10, 10, 0.5) 60%,
+    rgba(10, 10, 10, 0.2) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.textOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 2.5rem;
+  z-index: 2;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+.overlayText {
+  font-family: 'Trajan Pro', serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+

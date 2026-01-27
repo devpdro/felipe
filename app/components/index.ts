@@ -1,5 +1,6 @@
-export { default as Vitruvian } from "./vitruvian/vitruvian";
-export { default as Header } from "./header/header";
+export { default as Hero } from "./hero/hero";
+export { default as Banner } from "./banner/banner";
+export { default as Manifesto } from "./manifesto/manifesto";
 export { default as Atlas } from "./atlas/atlas";
 export { default as Price } from "./price/price";
 export { default as FAQ } from "./faq/faq";

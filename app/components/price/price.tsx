@@ -93,6 +93,7 @@ const Price = () => {
               </motion.div>
 
               <motion.div
+                className={S.buttonWrapper}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -102,7 +103,7 @@ const Price = () => {
                   delay: 0.4,
                 }}
               >
-                <a href="https://pay.hotmart.com/U100928033C" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'inline-block', width: '100%' }}>
+                <a href="https://pay.hotmart.com/U100928033C" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block', width: '100%' }}>
                   <Button
                     label="COMEÇAR AGORA"
                     size="lg"

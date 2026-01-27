@@ -219,6 +219,12 @@
       overflow: hidden;
     }
 
+    .buttonWrapper {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 9999px;
+    }
+
     .heading {
       font-family: 'Trajan Pro', serif;
       color: rgba(220, 225, 255, 0.9);

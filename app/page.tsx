@@ -1,4 +1,4 @@
-import { Vitruvian, Atlas, Price, FAQ, Footer, Lumen, Proof, Comparison, Exclusive } from "@/app/components";
+import { Banner, Price, FAQ, Footer, Lumen, Proof, Comparison, Exclusive } from "@/app/components";
 
 
 export default function Home() {
@@ -16,14 +16,8 @@ export default function Home() {
         backgroundPosition: '0 0'
       }}>
       </div>
-      <div className="relative w-full min-h-screen z-10">
-        <Vitruvian /> 
-      </div>
-      <div className="relative w-full min-h-screen z-10">
-        <Atlas /> 
-      </div>
-      <div className="relative w-full z-10" style={{ marginTop: "0", marginBottom: "0" }}>
-        <Lumen />
+      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <Banner />
       </div>
       <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
         <Exclusive />
@@ -33,6 +27,9 @@ export default function Home() {
       </div>
       <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
         <Proof />
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "0", marginBottom: "0" }}>
+        <Lumen />
       </div>
       <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
         <Price />
