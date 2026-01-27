@@ -32,13 +32,13 @@ export default function Home() {
         <Comparison />
       </div>
       <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <Proof />
+      </div>
+      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
         <Price />
       </div>
       <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
         <FAQ />
-      </div>
-      <div className="relative w-full z-10" style={{ marginTop: "2rem", marginBottom: "4rem" }}>
-        <Proof />
       </div>
       <div className="relative w-full z-10">
         <Footer />

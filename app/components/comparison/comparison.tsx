@@ -47,16 +47,16 @@ const Comparison = () => {
       <div className={S.container}>
         {/* Coluna Negativa - PARA QUEM NÃO É */}
         <motion.div
-          className={S.column}
+          className={`${S.column} ${S.columnNegative}`}
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className={S.title}>
-            Para quem <span className={S.highlight}>NÃO</span> é
+            Para quem <span className={S.highlightNegative}>NÃO</span> é
           </h2>
-          <div className={S.panel}>
+          <div className={`${S.panel} ${S.panelNegative}`}>
             <ul className={S.list}>
               {NOT_FOR_WHO_ITEMS.map((item, index) => (
                 <motion.li
@@ -67,7 +67,7 @@ const Comparison = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
                 >
-                  <span className={S.icon}>✗</span>
+                  <span className={S.iconNegative}>✗</span>
                   <span>{item}</span>
                 </motion.li>
               ))}
@@ -77,16 +77,16 @@ const Comparison = () => {
 
         {/* Coluna Positiva - PARA QUEM É */}
         <motion.div
-          className={S.column}
+          className={`${S.column} ${S.columnPositive}`}
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className={S.title}>
-            Para quem <span className={S.highlight}>É</span>
+            Para quem <span className={S.highlightPositive}>É</span>
           </h2>
-          <div className={S.panel}>
+          <div className={`${S.panel} ${S.panelPositive}`}>
             <ul className={S.list}>
               {FOR_WHO_ITEMS.map((item, index) => (
                 <motion.li
@@ -97,7 +97,7 @@ const Comparison = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
                 >
-                  <span className={S.icon}>✓</span>
+                  <span className={S.iconPositive}>✓</span>
                   <span>{item}</span>
                 </motion.li>
               ))}

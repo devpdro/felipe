@@ -1,4 +1,5 @@
 export { default as Vitruvian } from "./vitruvian/vitruvian";
+export { default as Header } from "./header/header";
 export { default as Atlas } from "./atlas/atlas";
 export { default as Price } from "./price/price";
 export { default as FAQ } from "./faq/faq";
