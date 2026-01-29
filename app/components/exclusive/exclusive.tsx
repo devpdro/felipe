@@ -10,17 +10,17 @@ import S from "./exclusive.module.scss";
 const CARDS = [
   {
     image: IMAGE.IMAGE_1,
-    title: "DESENVOLVIMENTO DE CHACKRA",
+    title: "DESPARASITAÇÃO",
     description: "Desbloqueie e alinhe seus chakras para viver com mais clareza, energia e equilíbrio interior.",
   },
   {
     image: IMAGE.IMAGE_2,
-    title: "CANALIZAÇÕES",
+    title: "EFEITOS COLATERAIS",
     description: "Conecte-se com a fonte da sabedoria interior e receba mensagens que guiam sua jornada espiritual.",
   },
   {
     image: IMAGE.IMAGE_3,
-    title: "MÓDULO PSIC",
+    title: "HARMONIA ALIMENTAR",
     description: "Expanda sua mente, conecte-se com seus padrões e fortaleça sua consciência para viver em plenitude.",
   },
   {
@@ -94,7 +94,7 @@ const Exclusive = () => {
       >
         <a href="https://pay.hotmart.com/U100928033C" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'inline-block' }}>
           <Button
-            label="COMEÇAR AGORA"
+            label="EU QUERO O META CORPO"
             size="lg"
           />
         </a>

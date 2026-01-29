@@ -10,5 +10,7 @@ export { default as Meta } from "./meta/meta";
 export { default as Comparison } from "./comparison/comparison";
 export { default as Exclusive } from "./exclusive/exclusive";
 export { default as Manifesto } from "./manifesto/manifesto";
+export { default as Phases } from "./phases/phases";
+export { default as HowItWorks } from "./how-it-works/how-it-works";
 export * from "./form";
 

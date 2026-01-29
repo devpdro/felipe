@@ -24,9 +24,9 @@ const Proof = memo(() => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h1 className={S.title}>
-          <TextShimmer duration={3.5} spread={3} baseColor="#DAA520" gradientColor="#CD853F">Veja quem já está</TextShimmer>{" "}
-          <TextShimmer duration={3.5} spread={3} baseColor="#DAA520" gradientColor="#CD853F">transformando</TextShimmer>{" "}
-          <TextShimmer duration={3.5} spread={3} baseColor="#DAA520" gradientColor="#CD853F">seu corpo</TextShimmer>
+          <TextShimmer duration={3.5} spread={3} baseColor="#DAA520" gradientColor="#CD853F">Resultados reais</TextShimmer>{" "}
+          <TextShimmer duration={3.5} spread={3} baseColor="#DAA520" gradientColor="#CD853F">de quem já</TextShimmer>{" "}
+          <TextShimmer duration={3.5} spread={3} baseColor="#DAA520" gradientColor="#CD853F">transformou o corpo</TextShimmer>
         </h1>
       </motion.div>
       <motion.p
@@ -36,7 +36,7 @@ const Proof = memo(() => {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
       >
-        Resultados reais de quem já começou a transformação.
+        Você acorda com mais energia. Sustenta atenção por mais tempo. Reage menos. Cansa menos. Sente mais presença no dia. Isso tudo só na primeira semana, como pode ver no exemplo de uma aluna que recebeu uma aula, sim, apenas uma aula do meta corpo.
       </motion.p>
       <div className={S.grid}>
         {PROOF_IMAGES.map((item, index) => (

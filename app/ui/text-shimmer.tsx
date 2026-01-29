@@ -33,13 +33,13 @@ const createShimmerProps = (
 ) => ({
   className: cn('relative inline-block', className),
   animate: {
-    backgroundPosition: ['0% center', '100% center', '0% center'] as const,
+    backgroundPosition: ['0% center', '100% center', '0% center'],
   },
   transition: {
     repeat: Infinity,
     duration,
     ease: 'linear' as const,
-    times: [0, 0.5, 1] as const,
+    times: [0, 0.5, 1],
   },
   style: {
     backgroundImage: `linear-gradient(90deg, 

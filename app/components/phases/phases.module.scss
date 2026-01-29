@@ -1,0 +1,177 @@
+.section {
+  max-width: 1280px;
+  margin: 6rem auto;
+  padding: 0 1.075rem;
+
+  @media (max-width: 768px) {
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  @media (max-width: 768px) {
+    gap: 3rem;
+  }
+}
+
+.title {
+  font-family: 'Trajan Pro', serif;
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    gap: 2.5rem;
+  }
+}
+
+.phase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.connector {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 3rem;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    height: 2.5rem;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(218, 165, 32, 0.4) 0%,
+    rgba(218, 165, 32, 0.6) 50%,
+    rgba(218, 165, 32, 0.4) 100%
+  );
+  box-shadow: 0 0 8px rgba(218, 165, 32, 0.3);
+}
+
+.phaseContent {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(218, 165, 32, 0.15);
+  box-shadow: 
+    0 0 0 1px rgba(218, 165, 32, 0.08),
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+
+  &:hover {
+    border-color: rgba(218, 165, 32, 0.25);
+    box-shadow: 
+      0 0 0 1px rgba(218, 165, 32, 0.15),
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(218, 165, 32, 0.3) 20%,
+      rgba(218, 165, 32, 0.5) 50%,
+      rgba(218, 165, 32, 0.3) 80%,
+      transparent 100%
+    );
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.phaseNumber {
+  font-family: 'Trajan Pro', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #DAA520;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(218, 165, 32, 0.4);
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    margin-bottom: 0.875rem;
+  }
+}
+
+.phaseTitle {
+  font-family: 'Trajan Pro', serif;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 1rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 0.875rem;
+  }
+}
+
+.phaseDescription {
+  font-family: 'Trajan Pro', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+

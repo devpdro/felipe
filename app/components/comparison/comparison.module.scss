@@ -231,3 +231,27 @@
   line-height: 1;
 }
 
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-top: 1rem;
+
+  @media (max-width: 768px) {
+    margin-top: 2.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+

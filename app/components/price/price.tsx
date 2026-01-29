@@ -105,7 +105,7 @@ const Price = () => {
               >
                 <a href="https://pay.hotmart.com/U100928033C" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block', width: '100%' }}>
                   <Button
-                    label="COMEÇAR AGORA"
+                    label="EU QUERO O META CORPO"
                     size="lg"
                     width="100%"
                   />

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TextShimmer } from "@/app/ui/text-shimmer";
+import { Button } from "@/app/components/form";
 import S from "./comparison.module.scss";
 
 const FOR_WHO_ITEMS = [
@@ -105,6 +106,25 @@ const Comparison = () => {
           </div>
         </motion.div>
       </div>
+
+      <motion.div
+        className={S.cta}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{
+          duration: 0.6,
+          ease: [0.25, 0.1, 0.25, 1],
+          delay: 0.3,
+        }}
+      >
+        <a href="https://pay.hotmart.com/U100928033C" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'inline-block' }}>
+          <Button
+            label="EU QUERO O META CORPO"
+            size="lg"
+          />
+        </a>
+      </motion.div>
     </section>
   );
 };

@@ -223,7 +223,7 @@ const FAQ = () => {
       >
         <a href="https://pay.hotmart.com/S102777434V?bid=1765628003164" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'inline-block' }}>
           <Button
-            label="COMEÇAR AGORA"
+            label="EU QUERO O META CORPO"
             size="lg"
           />
         </a>
