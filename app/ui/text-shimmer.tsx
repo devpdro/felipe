@@ -30,17 +30,20 @@ const createShimmerProps = (
   baseColor: string,
   gradientColor: string,
   stripeWidth: number
-) => ({
-  className: cn('relative inline-block', className),
-  animate: {
-    backgroundPosition: ['0% center', '100% center', '0% center'],
-  },
-  transition: {
-    repeat: Infinity,
-    duration,
-    ease: 'linear' as const,
-    times: [0, 0.5, 1],
-  },
+) => {
+  const backgroundPositions: [string, string, string] = ['0% center', '100% center', '0% center'];
+  
+  return {
+    className: cn('relative inline-block', className),
+    animate: {
+      backgroundPosition: backgroundPositions,
+    } as any,
+    transition: {
+      repeat: Infinity,
+      duration,
+      ease: 'linear' as const,
+      times: [0, 0.5, 1] as [number, number, number],
+    },
   style: {
     backgroundImage: `linear-gradient(90deg, 
       ${baseColor} 0%, 
@@ -59,7 +62,8 @@ const createShimmerProps = (
     overflow: 'visible',
     lineHeight: '1.2',
   } as React.CSSProperties,
-});
+  };
+};
 
 export function TextShimmer({
   children,
