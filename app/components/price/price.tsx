@@ -89,7 +89,7 @@ const Price = () => {
                 }}
               >
                 <div className={S.priceValue}>R$88,88</div>
-                <div className={S.suffix}>/ vitalício</div>
+                <div className={S.suffix}>/ mensais</div>
               </motion.div>
 
               <motion.div
